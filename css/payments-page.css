@@ -1,0 +1,178 @@
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f5;
+}
+
+.upi-section,
+.card-section,
+.netbanking-section{
+    display: none;
+}
+
+.upi-section.active,
+.card-section.active,
+.netbanking-section.active{
+    display: block;
+}
+
+.payment-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 28px;
+    padding: 28px;
+    max-width: 900px;
+    margin: 0 auto;
+    background:transparent;
+    min-height: 80vh;
+    align-items:start;
+}
+
+.payment-form {
+    background: #ffffff;      
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #ebebeb;
+}
+
+.order-summary{
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #ebebeb;
+}
+
+.payment-form h2,.order-summary h2{
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+    margin: 0 0 20px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.summary-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 14px;
+}
+
+.summary-row .label {
+    color: #999;
+    font-size: 13px;
+}
+
+.summary-row .value {
+    text-transform: capitalize;
+    color: #111;
+    font-weight: 500;
+    text-align: right;
+    max-width: 60%;
+}
+
+.summary-divider{
+    margin: 8px 0;
+}
+
+.summary-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111;
+}
+
+
+.payment-methods{
+    display: flex;
+    gap: 0;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.payment-tab{
+    flex: 1;
+    padding: 10px;
+    background: #ffffff;
+    border: none;
+    font-size: 13px;
+    color: #999;
+    cursor: pointer;
+    border-right: 1px solid #ebebeb;
+    transition: all 0.2s ease;
+}
+
+.payment-tab:last-child{
+    border-right: none;
+
+}
+
+.payment-tab.active{
+    background: #fff3f0;
+    color: #ff4d00;
+}
+
+.upi-section label,
+.card-section label,
+.netbanking-section label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.upi-section input,
+.card-section input,
+.netbanking-section select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.upi-section input:focus,
+.card-section input:focus {
+    border-color: #ff4d00;
+}
+
+.card-section .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.netbanking-section select {
+    cursor: pointer;
+    background: #ffffff;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 14px;
+    background: #ff4d00;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.2s ease;
+}
+
+.pay-btn:hover {
+    background: #e04400;
+}

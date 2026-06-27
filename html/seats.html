@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/authentication.css">
+    <link rel="stylesheet" href="../css/location.css">
+    <link rel="stylesheet" href="../css/seatsLayout.css">
+    <link rel="stylesheet" href="../css/orange-theme.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+
+            <div class="navbar-left">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">
+                        <span id="kodur">Kodur</span>
+                        <span id="hub">Hub</span>
+                    </div>
+                </a>
+                
+
+                <div class="location-wrapper">
+                    <div class="location js-location-btn">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Deliver to</span>
+                        <span class="location-city">Kodur</span>
+                    </div>
+                    <div class="location-dropdown js-location-dropdown">
+                        <p class="dropdown-label">YOUR LOCATION</p>
+                        <div class="location-option active-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>kodur</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="navbar-right">
+                <span id="signin-btn" class="js-signin-btn">Sign in</span>
+                <!-- <div class="profile">RK</div>
+                <span class="username">Ravi Kumar</span> -->
+            </div>
+    
+        </div>
+    </nav>
+
+
+    <div class="booking-info-bar"></div>
+
+
+    <div class="seats-page-wrapper">
+
+        <div class="seat-legend">
+
+            <div class="legend-item">
+                <div class="legend-box available">
+                </div>
+                <span>Available</span>
+            </div>
+
+            <div class="legend-item">
+                <div class="legend-box selected">
+                </div>
+                <span>Selected</span>
+            </div>
+
+            <div class="legend-item">
+                <div class="legend-box booked">
+                    <span>🗙</span>
+                </div>
+                <span>Booked</span>
+            </div>
+
+        </div>
+
+        <div class="seat-layout"></div>
+
+        <div class="screen-container">
+            <div class="screen">
+                <p>SCREEN THIS SIDE</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="booking-summary">
+
+        <div class="summary-left">
+            <p class="summary-label">Selected Seats</p>
+            <p class="selected-list">None</p>
+        </div>
+
+
+        <div class="summary-right">
+            <p class="total-price">₹0</p>
+            <button class="proceed-btn">Proceed to pay</button>
+        </div>
+        
+
+        
+    </div>
+    
+    <script src="../js/seats-page.js" type="module"></script>
+</body>
+</html>
+
+

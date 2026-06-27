@@ -1,0 +1,36 @@
+.navbar{
+    background: #0f9b9f;
+    border-bottom: 1px solid #0a5c60;
+}
+
+#kodur{
+    color: #ffffff;
+}
+
+#hub{
+    color: #a8e6e8;
+}
+
+.location{
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.2);
+    color: #ffffff;
+}
+
+.location-city {
+    color: #ffffff;
+}
+
+.location i {
+    color: #a8e6e8;
+}
+
+#signin-btn {
+    background: #ffffff;
+    color: #0d7377;
+}
+
+.profile{
+    background: #ffffff;
+    color: #0d7377
+}

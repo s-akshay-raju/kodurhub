@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodur Hub</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/authentication.css">
+    <link rel="stylesheet" href="../css/location.css">
+    <link rel="stylesheet" href="../css/food-confirmation.css">
+    <link rel="stylesheet" href="../css/teal-theme.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .delivery-eta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f0fafa;
+            border: 1px solid #e0f2f1;
+            border-radius: 8px;
+            padding: 14px 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #0d7377;
+            font-weight: 500;
+        }
+
+        .delivery-eta i {
+            font-size: 18px;
+            color: #0d7377;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close js-close-form">&times;</button>
+
+            <div class="modal-tabs">
+                <button id="js-signin-tab" class="tab-btn js-signin-links active">Sign in</button>
+                <button id="js-signup-tab" class="tab-btn js-signup-links">Sign up</button>
+            </div>
+
+            <div class="tab-content signin-form js-signin-form active" id="signin-form">
+                <h2>Welcome back</h2>
+                <p>sign in to your KodurHub account</p>
+
+                <div class="input-group">
+                    <label for="user-phone-number">Phone number</label>
+                    <input type="tel"  id="user-phone-number">
+                </div>
+
+                <div class="input-group">
+                    <label for="user-password">Password</label>
+                    <input type="password"  id="user-password">
+                </div>
+
+                <button class="submit-btn" data-tab="signin">Sign in</button>
+
+                <p class="switch-text js-signup-links">Don't have an account? Sign up</p>
+            </div>
+
+            <div class="tab-content signup-form js-signup-form" id="signup-form">
+                <h2>Create account</h2>
+                <p>Join KodurHub today</p>
+                <div class="input-group">
+                    <label for="signup-full-name">Full name</label>
+                    <input type="text" id="signup-full-name">
+                </div>
+
+                <div class="input-group">
+                    <label for="signup-phone-number">Phone number</label>
+                    <input type="tel" id="signup-phone-number">
+                </div>
+                    
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password">
+                </div>
+                <button class="submit-btn" data-tab="signup">Create account</button>
+                <p class="switch-text js-signin-links">Already have an account? Sign in</p>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <nav>
+        <div class="navbar">
+
+            <div class="navbar-left">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">
+                        <span id="kodur">Kodur</span>
+                        <span id="hub">Hub</span>
+                    </div>
+                </a>
+                
+
+                <div class="location-wrapper">
+                    <div class="location js-location-btn">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Deliver to</span>
+                        <span class="location-city">Kodur</span>
+                    </div>
+                    <div class="location-dropdown js-location-dropdown">
+                        <p class="dropdown-label">YOUR LOCATION</p>
+                        <div class="location-option active-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>kodur</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="navbar-right">
+                <span id="signin-btn" class="js-signin-btn">Sign in</span>
+                <!-- <div class="profile">RK</div>
+                <span class="username">Ravi Kumar</span> -->
+            </div>
+    
+        </div>
+    </nav>
+
+    <div class="confirmation-wrapper">
+    <div class="confirmation-card js-confirmation"></div>
+</div>
+
+
+    <script src="../js/food-confirmation.js" type="module"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/location.js"></script>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,51 @@
+.payment-tab{
+    background: #E6F4F5;
+    color: #2C5E61;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500; 
+}
+
+.payment-tab:hover{
+    background: #CEEBED;
+}
+
+.payment-tab.active{
+    background: #086B71;
+    color: #ffffff;
+}
+
+.upi-section input:focus,
+.card-section input:focus {
+    border-color: #555;
+}
+
+.pay-btn {
+    background: #10B981;
+    color: #ffffff;
+}
+
+.pay-btn:hover {
+    background: #059669;
+}
+
+.value{
+    font-weight: 500;
+    color: #111
+}
+
+.address-value{
+    text-align: right;
+    max-width: 60%;
+}
+
+.secure-text{
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 8px;
+} 
+
+.order-summary{
+    color: #1E293B;
+    size: 18px;
+}

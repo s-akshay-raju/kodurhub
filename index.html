@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodur Hub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/authentication.css">
+
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <link rel="stylesheet" href="css/location.css">
+
+    <link rel="stylesheet" href="../css/orange-theme.css">
+    
+
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+        }
+        p , h2, h4{
+            margin: 0;
+        }
+
+        .hero{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at 80% 50%, rgba(255,80,0,0.12) 0%, transparent 55%),linear-gradient(to right, #080300, #1a0a00, #0a0500);
+            color: white;
+            border-bottom: 1px solid #2a1500;
+            padding: 56px 28px;
+        }
+
+        .hero h1{
+            font-size: 32px;
+            font-weight: 500;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .hero p{
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 10px;
+            margin-bottom: 0
+        }
+
+        .search-bar{
+            margin-top: 28px;
+            width: 100%;
+            max-width: 460px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .search-bar span{
+            font-size: 16px;
+            color: #bbb
+        }
+
+        .search-bar input{
+            border: none;
+            outline: none;
+            font-size: 14px;
+            color: #111;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            background: transparent;
+            
+        }
+
+        .services{
+            background-color: #ffffff;
+            padding: 28px;
+            box-sizing: border-box;
+        }
+
+        .services-label{
+            font-size: 11px;
+            color: #aaaaaa;
+            letter-spacing: 0.1em;
+            text-transform:uppercase;
+            font-weight: 500;
+            margin: 0 0 16px 0;
+            
+
+        }
+
+        .cards-container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 16px;
+        }
+
+        .card {
+            border-radius: 14px;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            overflow: hidden;
+            height: 200px;
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: transform 0.2s ease , box-shadow 0.2s ease;
+            
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .card-content{
+            padding: 20px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+            flex: 1
+
+        }
+
+        .card-tag{
+            font-size: 10px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            width: fit-content;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .card-title{
+            font-size: 28px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .card-sub{
+            font-size: 13px;
+            margin-top: 6px;
+            margin-bottom: 0;
+        }
+
+        .card-btn{
+            margin-top: 12px;
+            padding: 9px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            width: fit-content
+        }
+
+        .card-logo{
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            flex-shrink: 0;
+        }
+
+        .card-movies{
+            background: #0d0d1a;
+        }
+
+        .card-movies .card-tag{
+            background: #5b21b6;
+            color: #ffffff;
+        }
+        
+        .card-movies .card-title{
+            color: #ffffff;
+        }
+        
+        .card-movies .card-sub{
+            color: rgba(255, 255, 255, 0.45);
+        }
+        
+        .card-movies .card-btn{
+            background: #7c3aed;
+            color: #ffffff;
+            
+        }
+        
+        .card-movies .card-logo{
+            background: #0a0a15;
+            
+        }
+
+        .card-food{
+            background:#fff8f0;
+            border: 1px solid #ffe4c4;
+        }
+
+        .card-food .card-tag{
+            background: #ffedd5;
+            color: #c2410c;
+           
+        }
+        
+        .card-food .card-title{
+            color: #111111;
+        }
+        
+        .card-food .card-sub{
+            color: #9a3412;
+        }
+        
+        .card-food .card-btn{
+            background: transparent;
+            color: #111111;
+            border: 1.5px solid #ddd;
+        }
+        
+        .card-food .card-logo{
+            background: #ffe8cc;
+            
+        }
+
+        .card-grocery{
+            background-color:#f0fff4;
+            border: 1px solid #bbf7d0;
+        }
+
+        .card-grocery .card-tag{
+            background: #dcfce7;
+            color: #15803d;
+            
+        }
+        
+        .card-grocery .card-title{   
+            color: #111111;
+        }
+
+        .card-grocery .card-sub{   
+            color: #166534;
+            
+        }
+
+        .card-grocery .card-btn{   
+            color: #111111;
+            border: 1.5px solid #bbf7d0;
+            background: transparent;
+
+        }
+
+        .card-grocery .card-logo{   
+            background: #d1fae5;
+        }
+
+        .coming-soon{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+            padding: 0 28px 28px 28px;
+            
+        }
+
+        .coming-soon-label{
+            text-transform: uppercase;
+            opacity:0.5;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+        }
+
+        .upcoming-services{
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            justify-content:space-evenly;
+            
+        }
+
+        .cs-card{
+            border: 1.5px dashed #e0e0e0;
+            border-radius: 10px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .cs-services-label{
+            color: #aaaaaa;
+            font-size: 12px
+        }
+
+        .cs-card i{
+            font-size: 28px;
+            color: #cccccc;
+        }
+
+        .soon{
+            border: 1px solid #e5e5e5;
+            color: #aaaaaa;
+            border-radius: 20px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            background: #f0f0f0;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close js-close-form">&times;</button>
+
+            <div class="modal-tabs">
+                <button id="js-signin-tab" class="tab-btn js-signin-links active">Sign in</button>
+                <button id="js-signup-tab" class="tab-btn js-signup-links">Sign up</button>
+            </div>
+
+            <div class="tab-content signin-form js-signin-form active" id="signin-form">
+                <h2>Welcome back</h2>
+                <p>sign in to your KodurHub account</p>
+
+                <div class="input-group">
+                    <label for="user-phone-number">Phone number</label>
+                    <input type="tel"  id="user-phone-number">
+                </div>
+
+                <div class="input-group">
+                    <label for="user-password">Password</label>
+                    <input type="password"  id="user-password">
+                </div>
+
+                <button class="submit-btn" data-tab="signin">Sign in</button>
+
+                <p class="switch-text js-signup-links">Don't have an account? Sign up</p>
+            </div>
+
+            <div class="tab-content signup-form js-signup-form" id="signup-form">
+                <h2>Create account</h2>
+                <p>Join KodurHub today</p>
+                <div class="input-group">
+                    <label for="signup-full-name">Full name</label>
+                    <input type="text" id="signup-full-name">
+                </div>
+
+                <div class="input-group">
+                    <label for="signup-phone-number">Phone number</label>
+                    <input type="tel" id="signup-phone-number">
+                </div>
+                    
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password">
+                </div>
+                <button class="submit-btn" data-tab="signup">Create account</button>
+                <p class="switch-text js-signin-links">Already have an account? Sign in</p>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <nav>
+        <div class="navbar">
+
+            <div class="navbar-left">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <div class="logo">
+                        <span id="kodur">Kodur</span>
+                        <span id="hub">Hub</span>
+                    </div>
+                </a>
+                
+
+                <div class="location-wrapper">
+                    <div class="location js-location-btn">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Deliver to</span>
+                        <span class="location-city">Kodur</span>
+                    </div>
+                    <div class="location-dropdown js-location-dropdown">
+                        <p class="dropdown-label">YOUR LOCATION</p>
+                        <div class="location-option active-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>kodur</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="navbar-right">
+                <span id="signin-btn" class="js-signin-btn">Sign in</span>
+                <!-- <div class="profile">RK</div>
+                <span class="username">Ravi Kumar</span> -->
+            </div>
+    
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Everything Kodur needs, in one place</h1>
+        <p>Movies · Food · Groceries — all in one place</p>
+        <div class="search-bar">
+            <span>🔍</span>
+            <input type="text" placeholder="Search movies, restaurants, groceries...">
+        </div>
+    </div>
+
+    <div class="services">
+        <p class="services-label">our services</p>
+        <div class="cards-container">
+            
+            <div class="card card-movies">
+
+                <div class="card-content">
+                    <span class="card-tag">Now showing in Kodur</span>
+                    <h2 class="card-title">Movies</h2>
+                    <p class="card-sub">Book seats at all theatres · Latest shows</p>
+                    <button class="card-btn" onclick="window.location.href = 'html/movies.html'">Book tickets</button>
+                </div>
+
+                <div class="card-logo">🎬</div>
+                
+            </div>
+            
+            <div class="card card-food">
+
+                <div class="card-content">
+                    <span class="card-tag">30-45 min delivery</span>
+
+                    <h2 class="card-title">Food delivery</h2>
+                    <p class="card-sub">All Kodur restaurants · Hot & fresh</p>
+                    <button class="card-btn" onclick="window.location.href='html/restaurants.html'">Order now</button>
+                </div>
+
+                <div class="card-logo">🍛</div>
+    
+            </div>
+            
+            <div class="card card-grocery">
+
+                <div class="card-content">
+                    <span class="card-tag">Delivered in 60 min</span>
+                    <h2 class="card-title">Groceries</h2>
+                    <p class="card-sub">Fresh vegetables · Daily essentials</p>
+                    <button class="card-btn">Shop now</button>
+                </div>
+
+                <div class="card-logo">🛒</div>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="coming-soon">
+        <p class="coming-soon-label">coming soon</p>
+        <div class="upcoming-services">
+
+            <div class="bus-tickets cs-card">
+                <i class="fa-solid fa-bus"></i>
+                <p class="cs-services-label">Bus tickets</p>
+                <div class="soon">Soon</div>
+            </div>
+            <div class="salon-booking cs-card">
+                <i class="fa-solid fa-scissors"></i>
+                <p class="cs-services-label">Salon booking</p>
+                <div class="soon">Soon</div>
+            </div>
+            <div class="doctors cs-card">
+                <i class="fa-solid fa-stethoscope"></i>
+                <p class="cs-services-label">Doctors</p>
+                <div class="soon">Soon</div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>KodurHub</h4>
+                <a href="#">About us</a>
+                <a href="#">How it works</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="#">Movie tickets</a>
+                <a href="#">Food delivery</a>
+                <a href="#">Groceries</a>
+                <a href="#">Coming soon</a>
+            </div>
+            <div class="footer-section">
+                <h4>For businesses</h4>
+                <a href="#">List your theatre</a>
+                <a href="#">Add your restaurant</a>
+                <a href="#">Partner with us</a>
+                <a href="#">Advertise</a>
+            </div>
+            <div class="footer-section">
+                <h4>Help</h4>
+                <a href="#">FAQs</a>
+                <a href="#">Track your order</a>
+                <a href="#">Refund policy</a>
+                <a href="#">Privacy policy</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 KodurHub · Made with ❤️ for Kodur</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/home.js"></script>
+    <script src="js/location.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+.navbar{
+    background: #fcf2d9;
+    border-bottom: 1px solid #ebebeb;
+}
+
+#kodur{
+    color: #111;
+}
+
+#hub{
+    color: #ff4d00;
+}
+
+.location i {
+    color: #ffffff;
+}
+
+#signin-btn{
+    background: #ff4d00;
+    color: #ffffff;
+}
+
+.profile{
+    background: #ffe0d6;
+    color : #ff4d00
+}
